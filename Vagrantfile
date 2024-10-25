@@ -16,7 +16,6 @@ Vagrant.configure("2") do |config|
 	subconfig.vm.provision "shell", path: "provisioning-web.sh"
 	subconfig.vm.synced_folder "web", "/var/www/html"
 
-	
 	subconfig.vm.provider "virtualbox" do |vb|
 	  vb.name = WEBNAME
 	  vb.memory = "1024"
